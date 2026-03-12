@@ -1,0 +1,33 @@
+/data/
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+
+# Paper build artifacts (only track .tex, .bib, .pdf, .png)
+paper/*
+!paper/*/
+!paper/*.tex
+!paper/*.bib
+!paper/*.pdf
+!paper/*.png
+!paper/figures/
+paper/figures/*
+!paper/figures/*.png
+!paper/figures/*.pdf
+!paper/tables/
+paper/tables/*
+!paper/tables/*.tex
+
+# Stata logs
+*.log
+
+# Lock / temp files
+~$*
+*.stswp
+
+# Website build artifacts
+website/node_modules/
+website/.next/
+website/out/
+website/tsconfig.tsbuildinfo

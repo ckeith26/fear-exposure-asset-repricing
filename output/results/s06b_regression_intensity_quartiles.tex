@@ -1,0 +1,114 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{ln(Real ZHVI) by Policy Intensity Quartile}
+\begin{tabular}{l*{1}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}\\
+                    &\multicolumn{1}{c}{Intensity Quartiles}\\
+\hline
+τ = m4 × Q1         &     0.00174         \\
+                    &    (0.0154)         \\
+[1em]
+τ = m3 × Q1         &     0.00279         \\
+                    &   (0.00732)         \\
+[1em]
+τ = m2 × Q1         &    -0.00243         \\
+                    &   (0.00474)         \\
+[1em]
+τ = p0 × Q1         &    0.000878         \\
+                    &   (0.00444)         \\
+[1em]
+τ = p1 × Q1         &     0.00210         \\
+                    &   (0.00505)         \\
+[1em]
+τ = p2 × Q1         &     0.00451         \\
+                    &   (0.00866)         \\
+[1em]
+τ = p3 × Q1         &     0.00826         \\
+                    &    (0.0107)         \\
+[1em]
+τ = p4 × Q1         &    -0.00817         \\
+                    &    (0.0113)         \\
+[1em]
+τ = m4 × Q2         &     -0.0194         \\
+                    &    (0.0159)         \\
+[1em]
+τ = m3 × Q2         &    0.000847         \\
+                    &   (0.00950)         \\
+[1em]
+τ = m2 × Q2         &     0.00484         \\
+                    &   (0.00431)         \\
+[1em]
+τ = p0 × Q2         &     0.00176         \\
+                    &   (0.00368)         \\
+[1em]
+τ = p1 × Q2         &     -0.0120         \\
+                    &   (0.00779)         \\
+[1em]
+τ = p2 × Q2         &     -0.0301\sym{***}\\
+                    &    (0.0107)         \\
+[1em]
+τ = p3 × Q2         &     -0.0396\sym{***}\\
+                    &    (0.0147)         \\
+[1em]
+τ = p4 × Q2         &     -0.0479\sym{**} \\
+                    &    (0.0186)         \\
+[1em]
+τ = m4 × Q3         &     -0.0169         \\
+                    &    (0.0107)         \\
+[1em]
+τ = m3 × Q3         &    -0.00771         \\
+                    &   (0.00939)         \\
+[1em]
+τ = m2 × Q3         &    -0.00509         \\
+                    &   (0.00721)         \\
+[1em]
+τ = p0 × Q3         &    -0.00339         \\
+                    &   (0.00550)         \\
+[1em]
+τ = p1 × Q3         &    -0.00726         \\
+                    &   (0.00912)         \\
+[1em]
+τ = p2 × Q3         &    -0.00960         \\
+                    &    (0.0116)         \\
+[1em]
+τ = p3 × Q3         &     -0.0243\sym{*}  \\
+                    &    (0.0131)         \\
+[1em]
+τ = p4 × Q3         &     -0.0315         \\
+                    &    (0.0191)         \\
+[1em]
+τ = m4 × Q4         &    -0.00284         \\
+                    &    (0.0190)         \\
+[1em]
+τ = m3 × Q4         &    0.000271         \\
+                    &   (0.00605)         \\
+[1em]
+τ = m2 × Q4         &    -0.00487         \\
+                    &   (0.00318)         \\
+[1em]
+τ = p0 × Q4         &    0.000415         \\
+                    &   (0.00448)         \\
+[1em]
+τ = p1 × Q4         &    -0.00484         \\
+                    &   (0.00671)         \\
+[1em]
+τ = p2 × Q4         &     -0.0141         \\
+                    &    (0.0163)         \\
+[1em]
+τ = p3 × Q4         &     -0.0211         \\
+                    &    (0.0228)         \\
+[1em]
+τ = p4 × Q4         &     -0.0574         \\
+                    &    (0.0472)         \\
+\hline
+Observations        &     228,002         \\
+Within R²           &      0.0039         \\
+\hline\hline
+\multicolumn{2}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{2}{l}{\footnotesize Zip and county×year FE. SE clustered at county level.}\\
+\multicolumn{2}{l}{\footnotesize Quartiles of pre-LOMR NFIP policy penetration among treated zips.}\\
+\multicolumn{2}{l}{\footnotesize Q1 = lowest exposure, Q4 = highest exposure.}\\
+\multicolumn{2}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

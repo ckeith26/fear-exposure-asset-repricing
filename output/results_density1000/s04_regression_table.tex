@@ -1,0 +1,44 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{ln(Real ZHVI) on LOMR Treatment}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{No Controls}&\multicolumn{1}{c}{Main Controls}&\multicolumn{1}{c}{Full Controls}\\
+\hline
+τ = -4 (3+ yrs pre) &    -0.00926         &    -0.00929         &    -0.00926         \\
+                    &   (0.00860)         &   (0.00861)         &   (0.00861)         \\
+[1em]
+τ = -3 (2-3 yrs pre)&     0.00239         &     0.00226         &     0.00231         \\
+                    &   (0.00550)         &   (0.00548)         &   (0.00548)         \\
+[1em]
+τ = -2 (1-2 yrs pre)&   -0.000593         &   -0.000708         &   -0.000659         \\
+                    &   (0.00361)         &   (0.00359)         &   (0.00358)         \\
+[1em]
+τ = 0 (0-1 yr post) &    -0.00157         &    -0.00168         &    -0.00167         \\
+                    &   (0.00273)         &   (0.00274)         &   (0.00274)         \\
+[1em]
+τ = +1 (1-2 yrs post)&    -0.00747         &    -0.00771         &    -0.00776         \\
+                    &   (0.00482)         &   (0.00486)         &   (0.00486)         \\
+[1em]
+τ = +2 (2-3 yrs post)&     -0.0122\sym{*}  &     -0.0124\sym{*}  &     -0.0123\sym{*}  \\
+                    &   (0.00699)         &   (0.00702)         &   (0.00703)         \\
+[1em]
+τ = +3 (3-4 yrs post)&     -0.0168\sym{**} &     -0.0168\sym{**} &     -0.0168\sym{**} \\
+                    &   (0.00809)         &   (0.00805)         &   (0.00806)         \\
+[1em]
+τ = +4 (4+ yrs post)&     -0.0304\sym{**} &     -0.0306\sym{**} &     -0.0305\sym{**} \\
+                    &    (0.0131)         &    (0.0131)         &    (0.0131)         \\
+\hline
+Observations        &     127,790         &     127,790         &     127,790         \\
+Within R²           &      0.0017         &      0.0030         &      0.0031         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{4}{l}{\footnotesize Zip and county×year fixed effects.}\\
+\multicolumn{4}{l}{\footnotesize Standard errors clustered at county level.}\\
+\multicolumn{4}{l}{\footnotesize Reference period: 12-0 months before LOMR (τ = -1).}\\
+\multicolumn{4}{l}{\footnotesize Already-treated zips (LOMR before 2009) excluded.}\\
+\multicolumn{4}{l}{\footnotesize (1) No controls. (2) Unemployment rate, NFIP policies. (3) Adds avg premium, claims.}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

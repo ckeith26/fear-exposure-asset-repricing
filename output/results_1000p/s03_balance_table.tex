@@ -1,0 +1,22 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Balance Table: Pre-Treatment Characteristics}
+\begin{tabular}{l*{1}{ccc}}
+\hline\hline
+                    &     Control&     Treated&  Difference         \\
+\hline
+Home Value (Dec 2022 $)&  479,978.01&  465,100.86&   14,877.15         \\
+Population          &   21,339.46&   25,007.24&   -3,667.77\sym{***}\\
+Pop. Density (per sq mi)&    2,196.20&    1,340.88&      855.32\sym{***}\\
+County Unemp. Rate (%)&        6.49&        6.81&       -0.33\sym{***}\\
+NFIP Policies (qtr avg)&       63.70&       86.22&      -22.52\sym{***}\\
+NFIP Avg Premium ($)&      691.28&      764.90&      -73.62\sym{***}\\
+SFHA Zone Share     &        0.33&        0.39&       -0.05\sym{***}\\
+NFIP Claims (qtr avg)&        1.13&        1.36&       -0.23         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize Treated: zips with single LOMR during 2009-2022.}\\
+\multicolumn{4}{l}{\footnotesize Control: zips with no LOMR.}\\
+\multicolumn{4}{l}{\footnotesize Pre-treatment means reported for treated zips.}\\
+\multicolumn{4}{l}{\footnotesize Difference = Treated - Control. Welch t-test.}\\
+\end{tabular}
+\end{table}

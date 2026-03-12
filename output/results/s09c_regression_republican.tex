@@ -1,0 +1,68 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{ln(Real ZHVI) on Policy Intensity × Political Lean}
+\begin{tabular}{l*{1}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}\\
+                    &\multicolumn{1}{c}{Intensity × Republican Interaction}\\
+\hline
+τ = -4 × intensity  &      -3.080\sym{*}  \\
+                    &     (1.760)         \\
+[1em]
+τ = -3 × intensity  &       1.885\sym{***}\\
+                    &     (0.447)         \\
+[1em]
+τ = -2 × intensity  &       0.877\sym{**} \\
+                    &     (0.368)         \\
+[1em]
+τ = 0 × intensity   &      -0.979\sym{***}\\
+                    &     (0.240)         \\
+[1em]
+τ = +1 × intensity  &      -2.937\sym{***}\\
+                    &     (0.687)         \\
+[1em]
+τ = +2 × intensity  &      -5.640\sym{***}\\
+                    &     (1.681)         \\
+[1em]
+τ = +3 × intensity  &      -7.046\sym{***}\\
+                    &     (1.862)         \\
+[1em]
+τ = +4 × intensity  &      -12.72\sym{***}\\
+                    &     (1.152)         \\
+[1em]
+τ = -4 × intensity × Republican&       3.942\sym{**} \\
+                    &     (1.826)         \\
+[1em]
+τ = -3 × intensity × Republican&      -2.181\sym{***}\\
+                    &     (0.531)         \\
+[1em]
+τ = -2 × intensity × Republican&      -1.308\sym{***}\\
+                    &     (0.403)         \\
+[1em]
+τ = 0 × intensity × Republican&       1.092\sym{***}\\
+                    &     (0.389)         \\
+[1em]
+τ = +1 × intensity × Republican&       2.672\sym{***}\\
+                    &     (0.811)         \\
+[1em]
+τ = +2 × intensity × Republican&       5.981\sym{***}\\
+                    &     (1.789)         \\
+[1em]
+τ = +3 × intensity × Republican&       6.610\sym{***}\\
+                    &     (2.201)         \\
+[1em]
+τ = +4 × intensity × Republican&       11.33\sym{***}\\
+                    &     (1.997)         \\
+\hline
+Observations        &     222,843         \\
+Within R²           &      0.0058         \\
+\hline\hline
+\multicolumn{2}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{2}{l}{\footnotesize Sample: all treated zips + never-treated controls (full event study sample).}\\
+\multicolumn{2}{l}{\footnotesize ibin = intensity LOMR effect (Dem-leaning counties). rep = differential Republican effect.}\\
+\multicolumn{2}{l}{\footnotesize Republican = above-median county Republican two-party vote share.}\\
+\multicolumn{2}{l}{\footnotesize Intensity = pre-LOMR NFIP policies / population.}\\
+\multicolumn{2}{l}{\footnotesize Zip and county×year FE. SE clustered at county level.}\\
+\multicolumn{2}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

@@ -1,0 +1,66 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{ln(Real ZHVI) on LOMR × Policy Intensity}
+\begin{tabular}{l*{2}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+                    &\multicolumn{1}{c}{Binary Treatment}&\multicolumn{1}{c}{Intensity-Weighted}\\
+\hline
+τ = -4 (3+ yrs pre) &    -0.00929         &                     \\
+                    &   (0.00861)         &                     \\
+[1em]
+τ = -3 (2-3 yrs pre)&     0.00226         &                     \\
+                    &   (0.00548)         &                     \\
+[1em]
+τ = -2 (1-2 yrs pre)&   -0.000708         &                     \\
+                    &   (0.00359)         &                     \\
+[1em]
+τ = 0 (0-1 yr post) &    -0.00168         &                     \\
+                    &   (0.00274)         &                     \\
+[1em]
+τ = +1 (1-2 yrs post)&    -0.00771         &                     \\
+                    &   (0.00486)         &                     \\
+[1em]
+τ = +2 (2-3 yrs post)&     -0.0124\sym{*}  &                     \\
+                    &   (0.00702)         &                     \\
+[1em]
+τ = +3 (3-4 yrs post)&     -0.0168\sym{**} &                     \\
+                    &   (0.00805)         &                     \\
+[1em]
+τ = +4 (4+ yrs post)&     -0.0306\sym{**} &                     \\
+                    &    (0.0131)         &                     \\
+[1em]
+τ = -4 × intensity  &                     &       0.199         \\
+                    &                     &     (0.881)         \\
+[1em]
+τ = -3 × intensity  &                     &       0.453         \\
+                    &                     &     (0.341)         \\
+[1em]
+τ = -2 × intensity  &                     &      -0.104         \\
+                    &                     &     (0.286)         \\
+[1em]
+τ = 0 × intensity   &                     &      -0.196         \\
+                    &                     &     (0.435)         \\
+[1em]
+τ = +1 × intensity  &                     &      -1.697\sym{***}\\
+                    &                     &     (0.496)         \\
+[1em]
+τ = +2 × intensity  &                     &      -2.827\sym{***}\\
+                    &                     &     (0.921)         \\
+[1em]
+τ = +3 × intensity  &                     &      -4.012\sym{***}\\
+                    &                     &     (1.029)         \\
+[1em]
+τ = +4 × intensity  &                     &      -7.715\sym{***}\\
+                    &                     &     (2.539)         \\
+\hline
+Observations        &     127,790         &     127,790         \\
+Within R²           &      0.0030         &      0.0043         \\
+\hline\hline
+\multicolumn{3}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{3}{l}{\footnotesize Zip and county×year FE. SE clustered at county level.}\\
+\multicolumn{3}{l}{\footnotesize Intensity = pre-LOMR NFIP policies / population.}\\
+\multicolumn{3}{l}{\footnotesize Proxy for share of housing stock in flood zone.}\\
+\multicolumn{3}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

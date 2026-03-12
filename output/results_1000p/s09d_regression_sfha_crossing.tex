@@ -1,0 +1,42 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{ln(Real ZHVI) on SFHA-Crossing LOMRs}
+\begin{tabular}{l*{2}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+                    &\multicolumn{1}{c}{All LOMRs}&\multicolumn{1}{c}{SFHA-Crossing Only}\\
+\hline
+τ = -4 (3+ yrs pre) &    -0.00817         &    -0.00649         \\
+                    &   (0.00752)         &   (0.00900)         \\
+[1em]
+τ = -3 (2-3 yrs pre)&   -0.000657         &     0.00283         \\
+                    &   (0.00461)         &   (0.00597)         \\
+[1em]
+τ = -2 (1-2 yrs pre)&    -0.00168         &    -0.00205         \\
+                    &   (0.00296)         &   (0.00315)         \\
+[1em]
+τ = 0 (0-1 yr post) &   -0.000628         &     0.00258         \\
+                    &   (0.00235)         &   (0.00353)         \\
+[1em]
+τ = +1 (1-2 yrs post)&    -0.00461         &    0.000282         \\
+                    &   (0.00406)         &   (0.00499)         \\
+[1em]
+τ = +2 (2-3 yrs post)&    -0.00880         &    -0.00170         \\
+                    &   (0.00614)         &   (0.00753)         \\
+[1em]
+τ = +3 (3-4 yrs post)&     -0.0129\sym{*}  &    -0.00355         \\
+                    &   (0.00709)         &   (0.00955)         \\
+[1em]
+τ = +4 (4+ yrs post)&     -0.0250\sym{**} &     -0.0172         \\
+                    &    (0.0115)         &    (0.0127)         \\
+\hline
+Observations        &     216,776         &     204,202         \\
+Within R²           &      0.0026         &      0.0019         \\
+\hline\hline
+\multicolumn{3}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{3}{l}{\footnotesize Zip and county×year FE. SE clustered at county level.}\\
+\multicolumn{3}{l}{\footnotesize SFHA-crossing = zone\_risk\_direction is 'up' or 'down' (not 'stable').}\\
+\multicolumn{3}{l}{\footnotesize Reference period: τ = -1 (12-0 months before LOMR).}\\
+\multicolumn{3}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

@@ -1,0 +1,67 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{ln(NFIP Policies) on Upzoning vs Downzoning}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{Policies (Up)}&\multicolumn{1}{c}{Policies (Down)}&\multicolumn{1}{c}{Claims (Up)}&\multicolumn{1}{c}{Claims (Down)}\\
+\hline
+up\_m4               &     -0.0152         &                     &     -0.0613\sym{**} &                     \\
+                    &    (0.0341)         &                     &    (0.0298)         &                     \\
+[1em]
+up\_m3               &   -0.000135         &                     &     -0.0839\sym{*}  &                     \\
+                    &    (0.0332)         &                     &    (0.0450)         &                     \\
+[1em]
+up\_m2               &     -0.0174         &                     &     -0.0334         &                     \\
+                    &    (0.0252)         &                     &    (0.0389)         &                     \\
+[1em]
+up\_p0               &     -0.0138         &                     &     -0.0664\sym{**} &                     \\
+                    &    (0.0127)         &                     &    (0.0313)         &                     \\
+[1em]
+up\_p1               &    -0.00873         &                     &     -0.0448         &                     \\
+                    &    (0.0161)         &                     &    (0.0372)         &                     \\
+[1em]
+up\_p2               &     0.00248         &                     &     -0.0816\sym{**} &                     \\
+                    &    (0.0244)         &                     &    (0.0405)         &                     \\
+[1em]
+up\_p3               &    -0.00130         &                     &     -0.0490         &                     \\
+                    &    (0.0293)         &                     &    (0.0427)         &                     \\
+[1em]
+up\_p4               &     -0.0102         &                     &     -0.0693\sym{*}  &                     \\
+                    &    (0.0341)         &                     &    (0.0388)         &                     \\
+[1em]
+down\_m4             &                     &     -0.0354         &                     &      0.0227         \\
+                    &                     &    (0.0320)         &                     &    (0.0170)         \\
+[1em]
+down\_m3             &                     &     -0.0560\sym{*}  &                     &      0.0599\sym{***}\\
+                    &                     &    (0.0306)         &                     &    (0.0225)         \\
+[1em]
+down\_m2             &                     &     -0.0198         &                     &      0.0577\sym{**} \\
+                    &                     &    (0.0253)         &                     &    (0.0243)         \\
+[1em]
+down\_p0             &                     &     -0.0291         &                     &      0.0965\sym{**} \\
+                    &                     &    (0.0323)         &                     &    (0.0387)         \\
+[1em]
+down\_p1             &                     &     -0.0648\sym{**} &                     &      0.0486\sym{*}  \\
+                    &                     &    (0.0311)         &                     &    (0.0290)         \\
+[1em]
+down\_p2             &                     &     -0.0924\sym{**} &                     &      0.0513\sym{*}  \\
+                    &                     &    (0.0429)         &                     &    (0.0276)         \\
+[1em]
+down\_p3             &                     &     -0.0482         &                     &      0.0291         \\
+                    &                     &    (0.0411)         &                     &    (0.0239)         \\
+[1em]
+down\_p4             &                     &     -0.0649         &                     &      0.0275         \\
+                    &                     &    (0.0698)         &                     &    (0.0174)         \\
+\hline
+Observations        &     208,170         &     205,208         &     208,170         &     205,208         \\
+Within R²           &      0.0022         &      0.0025         &      0.0002         &      0.0002         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize Zip and county×year FE. SE clustered at county level.}\\
+\multicolumn{5}{l}{\footnotesize Each spec uses its treated subsample + all never-treated controls.}\\
+\multicolumn{5}{l}{\footnotesize Risk direction: SFHA zone share Δ (±1pp threshold).}\\
+\multicolumn{5}{l}{\footnotesize Reference period: τ = -1 (12-0 months before LOMR).}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

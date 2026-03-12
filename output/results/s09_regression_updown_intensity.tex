@@ -1,0 +1,115 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Treatment Intensity: Pooled vs Risk Direction}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{Pooled Intensity}&\multicolumn{1}{c}{Signed Intensity}&\multicolumn{1}{c}{Up + Down}\\
+\hline
+τ = -4 × intensity  &       0.411         &                     &                     \\
+                    &     (0.574)         &                     &                     \\
+[1em]
+τ = -3 × intensity  &      -0.130         &                     &                     \\
+                    &     (0.279)         &                     &                     \\
+[1em]
+τ = -2 × intensity  &      -0.302         &                     &                     \\
+                    &     (0.194)         &                     &                     \\
+[1em]
+τ = 0 × intensity   &    -0.00919         &                     &                     \\
+                    &     (0.287)         &                     &                     \\
+[1em]
+τ = +1 × intensity  &      -0.811\sym{**} &                     &                     \\
+                    &     (0.398)         &                     &                     \\
+[1em]
+τ = +2 × intensity  &      -1.651\sym{*}  &                     &                     \\
+                    &     (0.881)         &                     &                     \\
+[1em]
+τ = +3 × intensity  &      -3.288\sym{***}&                     &                     \\
+                    &     (1.030)         &                     &                     \\
+[1em]
+τ = +4 × intensity  &      -7.152\sym{***}&                     &                     \\
+                    &     (2.541)         &                     &                     \\
+[1em]
+τ = -4 × signed intensity&                     &       0.955         &                     \\
+                    &                     &     (0.642)         &                     \\
+[1em]
+τ = -3 × signed intensity&                     &       0.622         &                     \\
+                    &                     &     (0.587)         &                     \\
+[1em]
+τ = -2 × signed intensity&                     &       0.128         &                     \\
+                    &                     &     (0.347)         &                     \\
+[1em]
+τ = 0 × signed intensity&                     &      -0.203         &                     \\
+                    &                     &     (0.298)         &                     \\
+[1em]
+τ = +1 × signed intensity&                     &      -2.282\sym{*}  &                     \\
+                    &                     &     (1.338)         &                     \\
+[1em]
+τ = +2 × signed intensity&                     &      -2.438         &                     \\
+                    &                     &     (1.845)         &                     \\
+[1em]
+τ = +3 × signed intensity&                     &      -1.855         &                     \\
+                    &                     &     (1.785)         &                     \\
+[1em]
+τ = +4 × signed intensity&                     &      -0.153         &                     \\
+                    &                     &     (2.215)         &                     \\
+[1em]
+iup\_m4              &                     &                     &       1.247\sym{*}  \\
+                    &                     &                     &     (0.648)         \\
+[1em]
+iup\_m3              &                     &                     &       0.517         \\
+                    &                     &                     &     (0.786)         \\
+[1em]
+iup\_m2              &                     &                     &      -0.358         \\
+                    &                     &                     &     (0.417)         \\
+[1em]
+iup\_p0              &                     &                     &       0.129         \\
+                    &                     &                     &     (0.470)         \\
+[1em]
+iup\_p1              &                     &                     &      -1.592         \\
+                    &                     &                     &     (1.188)         \\
+[1em]
+iup\_p2              &                     &                     &      -2.103         \\
+                    &                     &                     &     (1.543)         \\
+[1em]
+iup\_p3              &                     &                     &      -2.230         \\
+                    &                     &                     &     (1.465)         \\
+[1em]
+iup\_p4              &                     &                     &      -1.303         \\
+                    &                     &                     &     (2.326)         \\
+[1em]
+idown\_m4            &                     &                     &      -0.635         \\
+                    &                     &                     &     (0.827)         \\
+[1em]
+idown\_m3            &                     &                     &      -0.957         \\
+                    &                     &                     &     (0.597)         \\
+[1em]
+idown\_m2            &                     &                     &      -0.843\sym{***}\\
+                    &                     &                     &     (0.295)         \\
+[1em]
+idown\_p0            &                     &                     &       0.485\sym{*}  \\
+                    &                     &                     &     (0.287)         \\
+[1em]
+idown\_p1            &                     &                     &       3.218         \\
+                    &                     &                     &     (2.233)         \\
+[1em]
+idown\_p2            &                     &                     &       2.846         \\
+                    &                     &                     &     (3.406)         \\
+[1em]
+idown\_p3            &                     &                     &       0.865         \\
+                    &                     &                     &     (3.771)         \\
+[1em]
+idown\_p4            &                     &                     &      -3.682         \\
+                    &                     &                     &     (5.410)         \\
+\hline
+Observations        &     228,002         &     228,002         &     228,002         \\
+Within R²           &      0.0039         &      0.0017         &      0.0018         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{4}{l}{\footnotesize Zip and county×year FE. SE clustered at county level.}\\
+\multicolumn{4}{l}{\footnotesize Intensity = pre-LOMR NFIP policies / population.}\\
+\multicolumn{4}{l}{\footnotesize Signed intensity: +intensity for upzoned, −intensity for downzoned.}\\
+\multicolumn{4}{l}{\footnotesize β < 0 in (2): markets respond rationally to direction of risk change.}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

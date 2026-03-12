@@ -1,0 +1,66 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{ln(Real ZHVI) on LOMR (Robustness)}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{Main (weighted)}&\multicolumn{1}{c}{Unweighted}&\multicolumn{1}{c}{Geographic Intensity}\\
+\hline
+τ = -4 (3+ yrs pre) &    -0.00929         &    -0.00789         &                     \\
+                    &   (0.00861)         &   (0.00814)         &                     \\
+[1em]
+τ = -3 (2-3 yrs pre)&     0.00226         &     0.00256         &                     \\
+                    &   (0.00548)         &   (0.00500)         &                     \\
+[1em]
+τ = -2 (1-2 yrs pre)&   -0.000708         &   -0.000536         &                     \\
+                    &   (0.00359)         &   (0.00317)         &                     \\
+[1em]
+τ = 0 (0-1 yr post) &    -0.00168         &    -0.00201         &                     \\
+                    &   (0.00274)         &   (0.00270)         &                     \\
+[1em]
+τ = +1 (1-2 yrs post)&    -0.00771         &    -0.00478         &                     \\
+                    &   (0.00486)         &   (0.00480)         &                     \\
+[1em]
+τ = +2 (2-3 yrs post)&     -0.0124\sym{*}  &    -0.00662         &                     \\
+                    &   (0.00702)         &   (0.00697)         &                     \\
+[1em]
+τ = +3 (3-4 yrs post)&     -0.0168\sym{**} &    -0.00883         &                     \\
+                    &   (0.00805)         &   (0.00808)         &                     \\
+[1em]
+τ = +4 (4+ yrs post)&     -0.0306\sym{**} &    -0.00948         &                     \\
+                    &    (0.0131)         &    (0.0147)         &                     \\
+[1em]
+geo\_m4              &                     &                     &     -0.0655         \\
+                    &                     &                     &    (0.0455)         \\
+[1em]
+geo\_m3              &                     &                     &     -0.0204         \\
+                    &                     &                     &    (0.0341)         \\
+[1em]
+geo\_m2              &                     &                     &     -0.0351         \\
+                    &                     &                     &    (0.0273)         \\
+[1em]
+geo\_p0              &                     &                     &      0.0128         \\
+                    &                     &                     &    (0.0211)         \\
+[1em]
+geo\_p1              &                     &                     &     0.00423         \\
+                    &                     &                     &    (0.0334)         \\
+[1em]
+geo\_p2              &                     &                     &      0.0212         \\
+                    &                     &                     &    (0.0404)         \\
+[1em]
+geo\_p3              &                     &                     &      0.0342         \\
+                    &                     &                     &    (0.0520)         \\
+[1em]
+geo\_p4              &                     &                     &      0.0543         \\
+                    &                     &                     &    (0.0655)         \\
+\hline
+Observations        &     127,790         &     127,790         &     127,790         \\
+Within R²           &      0.0030         &      0.0013         &      0.0016         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{4}{l}{\footnotesize Zip and county×year fixed effects.}\\
+\multicolumn{4}{l}{\footnotesize Standard errors clustered at county level.}\\
+\multicolumn{4}{l}{\footnotesize Geographic intensity = LOMR polygon area / ZCTA area.}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

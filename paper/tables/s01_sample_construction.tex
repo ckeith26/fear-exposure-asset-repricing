@@ -1,0 +1,38 @@
+\begin{table}[!htbp]
+\centering
+\caption{Sample Construction: From US Zip Codes to Estimation Panel}
+\label{tab:sample_construction}
+\begin{threeparttable}
+\begin{tabular}{@{}llr@{}}
+\toprule
+Step & Description & Zip Codes \\
+\midrule
+\multicolumn{3}{@{}l}{\textit{Panel A: Geographic sample}} \\[4pt]
+1 & All US zip codes & 33,782 \\
+2 & Restrict to NOAA coastal counties (ocean-bordering) & 5,450 \\
+3 & Merge with Zillow ZHVI (drop zips without coverage) & 4,836 \\[6pt]
+\multicolumn{3}{@{}l}{\textit{Panel B: Treatment classification (within 4,836)}} \\[4pt]
+  & LOMR--ZCTA spatial overlay pairs & 2,936 \\
+  & Zip codes with $\geq$1 effective LOMR & 1,125 \\
+  & \quad First LOMR in window (all treated zips) & 855 \\
+  & \quad Single LOMR, first in window (estimation treated group) & 398 \\
+  & \quad Multi-LOMR zips & 550 \\
+  & \quad Already treated before 2009 & 54 \\
+  & \quad First LOMR after sample window & 216 \\
+  & Never-treated zip codes & 3,711 \\[6pt]
+\multicolumn{3}{@{}l}{\textit{Panel C: Event-study restrictions}} \\[4pt]
+4 & Drop already-treated (no clean pre-period) & $-$54 \\
+  & Drop multi-LOMR (overlapping treatment timing) & $-$510 \\[2pt]
+  & \textbf{Final estimation sample} & \textbf{4,272} \\
+  & \quad Single-LOMR treated (in window) & 398 \\
+  & \quad Not-yet-treated (first LOMR after window) & 163 \\
+  & \quad Never-treated controls & 3,711 \\[2pt]
+5 & Quarterly panel (after collapse) & 228,005 obs \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} Sample begins with all US zip codes from the SimpleMaps database. Step 2 restricts to zip codes within NOAA-designated coastal counties that border the ocean (excluding Alaska, Hawaii, and US territories). Step 3 drops zips lacking Zillow Home Value Index coverage. Treatment is defined by spatial overlay of FEMA LOMR polygons onto Census ZCTA boundaries. Categories in Panel B are not mutually exclusive: a zip can be both multi-LOMR and already-treated. Panel C drops are applied sequentially; the multi-LOMR drop count (510) is net of the 54 already-treated zips removed in the prior step. Not-yet-treated zips (163) retain single LOMRs arriving after 2022 and contribute control observations during the sample period. The quarterly panel collapses monthly observations by averaging log values within each quarter.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

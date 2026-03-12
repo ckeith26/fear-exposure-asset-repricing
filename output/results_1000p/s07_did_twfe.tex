@@ -1,0 +1,28 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{ln(Real ZHVI) on LOMR (TWFE DiD)}
+\begin{tabular}{l*{1}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}\\
+                    &\multicolumn{1}{c}{TWFE DiD}\\
+\hline
+Post-LOMR           &    -0.00597         \\
+                    &   (0.00787)         \\
+[1em]
+County Unemp. Rate (%)&    -0.00215\sym{***}\\
+                    &  (0.000337)         \\
+[1em]
+NFIP Policies (qtr avg)& 0.000000725         \\
+                    & (0.0000101)         \\
+[1em]
+Constant            &       12.92\sym{***}\\
+                    &   (0.00210)         \\
+\hline
+Observations        &     216,776         \\
+Within R²           &      0.0015         \\
+\hline\hline
+\multicolumn{2}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{2}{l}{\footnotesize Zip and county×year FE. SE clustered at county level.}\\
+\multicolumn{2}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}
