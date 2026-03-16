@@ -81,7 +81,7 @@ export default function Hero() {
         {/* Paper & GitHub buttons */}
         <div className="flex items-center justify-center gap-3 mt-5">
           <a
-            href="/econ66-fear.pdf"
+            href="/KEITH_CAMERON_FLOOD_EXPOSURE_ASSET_REPRICING.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md border transition-colors duration-200"
@@ -109,7 +109,7 @@ export default function Hero() {
             Read the Paper
           </a>
           <a
-            href="https://github.com/ckeith26/fear-exposure-asset-repricing"
+            href="https://github.com/ckeith26/flood-exposure-asset-repricing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md border transition-colors duration-200"

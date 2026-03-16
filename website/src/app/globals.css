@@ -68,5 +68,16 @@ section.visible {
   background: var(--color-surface-hover);
 }
 
+/* Replication download button */
+.replication-btn {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: transparent;
+}
+.replication-btn:hover {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
 /* KaTeX overrides for theme */
 .katex { color: var(--color-text); }

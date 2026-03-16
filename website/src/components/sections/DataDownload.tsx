@@ -66,7 +66,7 @@ const DATASETS = [
       "Statutory citations and verification for the 9 states classified as having mandatory flood zone disclosure during the study period.",
     format: "MD",
     size: "<5 KB",
-    href: "https://github.com/ckeith26/fear-exposure-asset-repricing/blob/main/data/raw/state-disclosure-laws/disclosure_laws_sources.md",
+    href: "https://github.com/ckeith26/flood-exposure-asset-repricing/blob/main/data/raw/state-disclosure-laws/disclosure_laws_sources.md",
     external: true,
   },
   {
@@ -75,7 +75,7 @@ const DATASETS = [
       "Full zip × quarter panel with ZHVI, treatment indicators, NFIP policies/claims, and BLS unemployment. Generate via the data pipeline on GitHub.",
     format: "CSV",
     size: "~151 MB",
-    href: "https://github.com/ckeith26/fear-exposure-asset-repricing",
+    href: "https://github.com/ckeith26/flood-exposure-asset-repricing",
     external: true,
   },
   {
@@ -84,7 +84,7 @@ const DATASETS = [
       "Zip × month NFIP policy counts, premiums, claims, and SFHA shares. 997K rows. Generate via the data pipeline on GitHub.",
     format: "CSV",
     size: "~112 MB",
-    href: "https://github.com/ckeith26/fear-exposure-asset-repricing",
+    href: "https://github.com/ckeith26/flood-exposure-asset-repricing",
     external: true,
   },
 ];
@@ -101,7 +101,7 @@ export default function DataDownload() {
         provided as-is for replication and academic use. The source code for the
         full data pipeline is available on{" "}
         <a
-          href="https://github.com/ckeith26/fear-exposure-asset-repricing"
+          href="https://github.com/ckeith26/flood-exposure-asset-repricing"
           target="_blank"
           rel="noopener noreferrer"
           className="underline"
@@ -112,9 +112,62 @@ export default function DataDownload() {
         .
       </p>
 
+      {/* Replication Package */}
+      <div
+        className="mb-12 rounded-xl border-2 p-6 sm:p-8"
+        style={{
+          borderColor: "var(--color-accent)",
+          background: "color-mix(in srgb, var(--color-accent) 4%, var(--color-surface))",
+        }}
+      >
+        <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+          <div className="flex-1">
+            <h3 className="text-xl font-bold mb-2">Replication Package</h3>
+            <p className="text-sm mb-3" style={{ color: "var(--color-text-secondary)" }}>
+              Everything needed to reproduce all regression results in the paper.
+              Unzip, open Stata, and run <code className="text-xs px-1.5 py-0.5 rounded" style={{ background: "color-mix(in srgb, var(--color-text) 10%, transparent)" }}>do event_study.do</code>.
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs" style={{ color: "var(--color-text-secondary)" }}>
+              <span>Regression panel (zip x month)</span>
+              <span>Election returns</span>
+              <span>NFIP LOMR deltas</span>
+              <span>Disclosure laws</span>
+              <span>Stata do-file</span>
+              <span>Paper PDF</span>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-2 sm:flex-shrink-0">
+            <a
+              href="/data/downloads/econ66-fear-replication.zip"
+              download
+              className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-base font-semibold transition-opacity duration-150 hover:opacity-90"
+              style={{
+                background: "var(--color-accent)",
+                color: "#ffffff",
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download ZIP
+            </a>
+            <span className="font-mono text-xs" style={{ color: "var(--color-text-secondary)" }}>
+              ~47 MB
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Individual Files */}
+      <h3 className="text-lg font-semibold mb-6" style={{ color: "var(--color-text-secondary)" }}>
+        Individual Files
+      </h3>
+
       {/* Event Study Coefficients */}
       <div className="mb-10">
-        <h3 className="text-lg font-semibold mb-2">Event Study Coefficients</h3>
+        <h3 className="text-base font-semibold mb-2">Event Study Coefficients</h3>
         <p className="text-sm mb-4 max-w-3xl" style={{ color: "var(--color-text-secondary)" }}>
           Point estimates, standard errors, and 95% confidence intervals for each event-time
           coefficient across all specifications.

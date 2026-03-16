@@ -133,7 +133,7 @@ export default function Robustness() {
             penetration with the LOMR polygon area / ZCTA area ratio as the
             intensity measure. Coefficients flip positive and are
             insignificant, suggesting that raw spatial overlap with
-            reclassified zones is not sufficient — the effect operates through
+            reclassified zones is not sufficient; the effect operates through
             channels tied to insurance exposure and risk information rather
             than geographic footprint alone.
           </p>
@@ -235,12 +235,18 @@ export default function Robustness() {
             Placebo Test: Unemployment as Outcome
           </h3>
           <p className="text-sm mb-6 max-w-3xl" style={{ color: "var(--color-text-secondary)" }}>
-            If LOMRs specifically affect housing markets, they should have no
-            effect on county unemployment rates. Running the main event study
-            specification with unemployment as the outcome provides a
-            falsification test. Null coefficients confirm that the housing
-            effect is not driven by local economic shocks correlated with LOMR
-            timing.
+            Running the main event study specification with county unemployment
+            as the outcome provides a placebo check: if the housing effect is
+            specific to home values, unemployment should be unaffected. However,
+            the pre-treatment interaction test rejects parallel trends
+            (F(3, 338) = 7.22, p = 0.0001), and the &tau;=+4 bin is
+            significantly negative. This result should be read as a warning
+            sign, not supportive evidence. It implies that the processes
+            generating LOMRs may correlate with local economic changes not
+            fully absorbed by a linear unemployment control. The housing
+            estimates remain the paper&apos;s primary results, but readers
+            should note that the placebo does not cleanly rule out
+            macro-level confounds.
           </p>
           <EventStudyChart {...eventStudyPlacebo} />
         </div>

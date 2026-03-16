@@ -3,13 +3,13 @@ import ThemeScript from "@/components/ThemeScript";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FEAR - Flood Economics and Risk",
+  title: "FEAR - Flood Exposure and Asset Repricing",
   description:
     "How FEMA flood zone reclassifications affect home property values: an interactive research presentation using difference-in-differences and event study methods.",
   openGraph: {
-    title: "FEAR - Flood Economics and Risk",
+    title: "FEAR - Flood Exposure and Asset Repricing",
     description:
-      "Interactive research: LOMR flood zone reclassifications reduce home values by 2.7% over five years.",
+      "Interactive research: LOMR flood zone reclassifications reduce home values by 2.8% over four or more years.",
     type: "website",
     images: [
       {
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FEAR - Flood Economics and Risk",
+    title: "FEAR - Flood Exposure and Asset Repricing",
     description:
-      "Interactive research: LOMR flood zone reclassifications reduce home values by 2.7% over five years.",
+      "Interactive research: LOMR flood zone reclassifications reduce home values by 2.8% over four or more years.",
     images: ["https://fear.camkeith.me/images/event_study_main.png"],
   },
 };

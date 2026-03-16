@@ -33,7 +33,7 @@ I exploit Letters of Map Revision (LOMRs), official FEMA documents that revise f
 ## Repository Structure
 
 ```
-fear-exposure-asset-repricing/
+flood-exposure-asset-repricing/
 ├── paper/                 # LaTeX paper, figures, and tables
 │   ├── econ66-fear.tex    # Main paper source
 │   ├── econ66-fear.pdf    # Compiled paper

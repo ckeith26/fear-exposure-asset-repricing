@@ -108,7 +108,7 @@ export default function Navigation() {
           FEAR
         </a>
 
-        {/* Center: Section links — desktop */}
+        {/* Center: Section links (desktop) */}
         <div className="hidden sm:flex items-center gap-1 overflow-x-auto hide-scrollbar flex-1">
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href.slice(1);
@@ -149,7 +149,7 @@ export default function Navigation() {
         {/* Right: Paper + GitHub + Theme toggle */}
         <div className="flex items-center gap-1.5 shrink-0 sm:ml-4">
           <a
-            href="/econ66-fear.pdf"
+            href="/KEITH_CAMERON_FLOOD_EXPOSURE_ASSET_REPRICING.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded border transition-colors duration-200"
@@ -177,7 +177,7 @@ export default function Navigation() {
             Paper
           </a>
           <a
-            href="https://github.com/ckeith26/fear-exposure-asset-repricing"
+            href="https://github.com/ckeith26/flood-exposure-asset-repricing"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded border transition-colors duration-200"
@@ -258,7 +258,7 @@ export default function Navigation() {
           })}
           <div className="flex gap-2 pt-2 px-3">
             <a
-              href="/econ66-fear.pdf"
+              href="/KEITH_CAMERON_FLOOD_EXPOSURE_ASSET_REPRICING.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 text-sm font-medium rounded border transition-colors duration-200"
@@ -278,7 +278,7 @@ export default function Navigation() {
               Paper
             </a>
             <a
-              href="https://github.com/ckeith26/fear-exposure-asset-repricing"
+              href="https://github.com/ckeith26/flood-exposure-asset-repricing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 text-sm font-medium rounded border transition-colors duration-200"

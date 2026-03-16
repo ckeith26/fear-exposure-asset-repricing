@@ -70,7 +70,7 @@ const COLORS_LIGHT = {
   hoverHighlight: "rgba(0,0,0,0.15)",
 };
 
-// Default to dark — component will override with theme state
+// Default to dark; component will override with theme state
 let COLORS = COLORS_DARK;
 
 /** Zip is a treated zip in the regression sample (ever_treated = 1) */
@@ -163,7 +163,7 @@ function hvColor(p: ZipProps, year: number): string {
   return hvColorScale(Math.max(hvExtent[0], Math.min(hvExtent[1], val)));
 }
 
-// Search index — flat array built once from TopoJSON properties
+// Search index: flat array built once from TopoJSON properties
 interface SearchEntry {
   label: string;
   zip: string;
@@ -208,7 +208,7 @@ export default function TreatmentMap() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [theme, setTheme] = useState("dark");
 
-  // Theme observer — re-render map when theme changes
+  // Theme observer: re-render map when theme changes
   useEffect(() => {
     const el = document.documentElement;
     const update = () => {
@@ -281,13 +281,13 @@ export default function TreatmentMap() {
       .attr("height", height)
       .attr("viewBox", `0 0 ${width} ${height}`);
 
-    // Clip to viewport — some zip MultiPolygons have inverted winding
+    // Clip to viewport (some zip MultiPolygons have inverted winding)
     // that fills the entire plane; clipping hides the overflow
     sel.append("defs").append("clipPath").attr("id", "map-clip")
       .append("rect").attr("width", width).attr("height", height);
     const g = sel.append("g").attr("clip-path", "url(#map-clip)");
 
-    // Projection — lower 48 + DC only (FIPS 01–56, excluding AK=02, HI=15)
+    // Projection: lower 48 + DC only (FIPS 01-56, excluding AK=02, HI=15)
     const statesGeo = topojson.feature(
       usTopo,
       usTopo.objects.states as GeometryCollection,
@@ -297,7 +297,7 @@ export default function TreatmentMap() {
       return fips >= 1 && fips <= 56 && fips !== 2 && fips !== 15;
     });
 
-    // Zoom behavior — constrained to SVG bounds
+    // Zoom behavior, constrained to SVG bounds
     const zoom = d3
       .zoom<SVGSVGElement, unknown>()
       .scaleExtent([1, 20])
@@ -338,7 +338,7 @@ export default function TreatmentMap() {
       .style("stroke", COLORS.stateBorder)
       .style("stroke-width", "0.8");
 
-    // Zip polygons — only in-sample zips, treated on top
+    // Zip polygons: only in-sample zips, treated on top
     const zipGeo = topojson.feature(
       zipTopo,
       zipTopo.objects[zipObjKey] as GeometryCollection,
@@ -472,7 +472,7 @@ export default function TreatmentMap() {
       .style("stroke-width", "0.8")
       .style("pointer-events", "none");
 
-    // Hover + selection overlays — render on top of state borders
+    // Hover + selection overlays: render on top of state borders
     g.append("g").attr("class", "zip-hover").style("pointer-events", "none");
     g.append("g").attr("class", "zip-highlight").style("pointer-events", "none");
 
@@ -758,7 +758,7 @@ export default function TreatmentMap() {
           </div>
         )}
 
-        {/* Legend — hidden on mobile (shown below map instead) */}
+        {/* Legend, hidden on mobile (shown below map instead) */}
         <div
           className="hidden sm:flex absolute bottom-3 left-3 flex-col gap-1.5 px-3 py-2 rounded text-[11px]"
           style={{
@@ -855,7 +855,7 @@ export default function TreatmentMap() {
           )}
         </div>
 
-        {/* Zoom hint — hidden on mobile */}
+        {/* Zoom hint, hidden on mobile */}
         <div
           className="hidden sm:block absolute bottom-2 right-2 text-[10px] px-2 py-1 rounded"
           style={{
@@ -867,7 +867,7 @@ export default function TreatmentMap() {
           Scroll to zoom · Drag to pan · Double-click to reset
         </div>
 
-        {/* Top toolbar — hidden on mobile (controls shown below map instead) */}
+        {/* Top toolbar, hidden on mobile (controls shown below map instead) */}
         <div className="hidden sm:flex absolute top-3 left-3 right-3 z-10 items-center gap-2">
           {/* Mode toggle */}
           <div
@@ -1086,7 +1086,7 @@ export default function TreatmentMap() {
         </div>
       </div>
 
-      {/* Legend — mobile only, single line */}
+      {/* Legend, mobile only, single line */}
       <div
         className="flex sm:hidden items-center justify-center gap-4 mt-2 text-[11px]"
         style={{ color: "var(--color-text-secondary)" }}
@@ -1130,7 +1130,7 @@ export default function TreatmentMap() {
         )}
       </div>
 
-      {/* Mode toggle — mobile only */}
+      {/* Mode toggle, mobile only */}
       <div
         className="flex sm:hidden rounded-md overflow-hidden text-[11px] font-medium mt-3"
         style={{ border: "1px solid var(--color-border)" }}
@@ -1150,7 +1150,7 @@ export default function TreatmentMap() {
         ))}
       </div>
 
-      {/* Search bar — mobile only */}
+      {/* Search bar, mobile only */}
       <div className="sm:hidden mt-2">
         <input
           type="text"
@@ -1202,7 +1202,7 @@ export default function TreatmentMap() {
         )}
       </div>
 
-      {/* Filter inputs — mobile only */}
+      {/* Filter inputs, mobile only */}
       <div
         className="flex sm:hidden items-center gap-2 mt-2 px-2 py-1.5 rounded-md text-[10px] font-mono"
         style={{

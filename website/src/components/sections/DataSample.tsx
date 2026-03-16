@@ -17,16 +17,15 @@ export default function DataSample() {
         style={{ background: "var(--color-surface)", border: "1px solid var(--color-border)" }}
       >
         <p style={{ color: "var(--color-text-secondary)" }}>
-          The sample consists of all US coastal zip codes (excluding Alaska and
-          territories) observed quarterly from 2009 to 2022.{" "}
+          The sample consists of all US coastal zip codes (excluding Alaska,
+          Hawaii, and territories) observed quarterly from 2009 to 2022.{" "}
           <strong style={{ color: "var(--color-text)" }}>Treatment zips</strong>{" "}
-          are those whose ZCTA boundary intersects the ocean and received at
-          least one LOMR during the analysis window.{" "}
+          are those that received their first (and only) LOMR within the
+          2009 to 2022 window. ZIP codes with pre-2009 treatment or multiple
+          LOMRs are excluded to ensure clean identification.{" "}
           <strong style={{ color: "var(--color-text)" }}>Control zips</strong>{" "}
-          are adjacent coastal zips that share a boundary with treatment zips but
-          never received a LOMR. Zips treated before 2009 and those with
-          multiple LOMRs are excluded from the event study to ensure clean
-          identification.
+          consist of never-treated ZIP codes (no LOMR ever) and not-yet-treated
+          ZIP codes (first LOMR after the sample window).
         </p>
       </div>
 

@@ -91,8 +91,8 @@ function TabContent({ tabKey }: { tabKey: TabKey }) {
           <p className="text-sm mb-8 max-w-3xl" style={{ color: "var(--color-text-secondary)" }}>
             The intensity specification replaces binary event-time dummies with
             dummies scaled by pre-LOMR NFIP policy penetration (policies /
-            population), which is a proxy for the share of the zip&apos;s housing stock in the
-            flood zone. The effect is significant from &tau;=+1 onward (though &tau;=+2
+            population), a proxy for flood-risk salience (the extent to which
+            households already sit near the margin where insurance costs matter). The effect is significant from &tau;=+1 onward (though &tau;=+2
             only at 10%), with coefficients growing monotonically to <strong style={{ color: "var(--color-negative)" }}>
             &minus;7.15</strong> at &tau;=+4.
           </p>
@@ -163,16 +163,18 @@ function TabContent({ tabKey }: { tabKey: TabKey }) {
       return (
         <div>
           <p className="text-sm mb-8 max-w-3xl" style={{ color: "var(--color-text-secondary)" }}>
-            Not all LOMRs are equivalent. Those that cross the SFHA boundary
-            impose or remove a mandatory flood insurance requirement for
-            federally backed mortgages, creating a direct cost channel. Home
-            values should{" "}
+            Not all LOMRs are equivalent. LOMRs that shift the share of a zip
+            code in the Special Flood Hazard Area are classified as
+            &ldquo;upzoned&rdquo; or &ldquo;downzoned&rdquo; based on changes
+            in the SFHA share of NFIP policies. This should be read as an
+            exposure proxy rather than a direct parcel-level map transition.
+            In principle, home values should{" "}
             <strong style={{ color: "var(--color-negative)" }}>fall</strong> in{" "}
             <strong style={{ color: "var(--color-negative)" }}>upzoned</strong>{" "}
-            areas (mapped into the SFHA, imposing new insurance costs) and{" "}
+            areas (greater SFHA exposure, implying higher insurance costs) and{" "}
             <strong style={{ color: "var(--color-accent)" }}>rise</strong> in{" "}
             <strong style={{ color: "var(--color-accent)" }}>downzoned</strong>{" "}
-            areas (mapped out, eliminating the mandate). The upzoned
+            areas (reduced SFHA exposure). The upzoned
             coefficients trend negative, reaching{" "}
             <strong style={{ color: "var(--color-negative)" }}>&minus;2.2</strong>{" "}
             at &tau;=+3, while downzoned coefficients are positive at shorter
@@ -218,8 +220,9 @@ function TabContent({ tabKey }: { tabKey: TabKey }) {
             The binary LOMR event dummies are interacted with a disclosure indicator.
             The chart below uses the strict 9-state definition; the regression table
             also reports a broad 13-state definition (adding FL, VA, NC, NY).
-            The interaction terms are directionally consistent with
-            disclosure attenuating the price decline, but do not reach statistical significance.
+            The interaction terms do not reach statistical significance,
+            likely due to insufficient within-state variation with only 9
+            disclosure states in the sample.
           </p>
           <EquationBlock
             compact
@@ -241,7 +244,7 @@ function TabContent({ tabKey }: { tabKey: TabKey }) {
             seriesColors={["var(--color-negative)", "var(--color-accent)"]}
           />
           <p className="text-xs mt-3 max-w-3xl" style={{ color: "var(--color-text-muted)" }}>
-            <strong>Strict disclosure</strong> (9 states): CA, IL, IN, LA, MS, OR, SC, TX, WI &mdash;
+            <strong>Strict disclosure</strong> (9 states): CA, IL, IN, LA, MS, OR, SC, TX, WI;
             mandatory seller disclosure of flood zone designation.{" "}
             <strong>Broad disclosure</strong> (13 states) adds FL (common-law duty via <em>Johnson v. Davis</em>),
             VA (Residential Property Disclosure Act), NC (disclosure statement floodplain question),
@@ -263,18 +266,19 @@ function TabContent({ tabKey }: { tabKey: TabKey }) {
       return (
         <div>
           <p className="text-sm mb-8 max-w-3xl" style={{ color: "var(--color-text-secondary)" }}>
-            Splitting the intensity specification by county political lean reveals a stark
+            Splitting the intensity specification by county political lean reveals a
             differential. In{" "}
             <strong style={{ color: "var(--color-accent)" }}>Democratic-leaning</strong>{" "}
-            counties (2020 presidential vote), the intensity-weighted effect is large and
-            highly significant, reaching{" "}
+            counties (county-level mean Republican two-party vote share), the
+            intensity-weighted effect is large and highly significant, reaching{" "}
             <strong style={{ color: "var(--color-negative)" }}>&minus;12.7</strong> at
             &tau;=+4. In{" "}
             <strong style={{ color: "var(--color-negative)" }}>Republican-leaning</strong>{" "}
-            counties, the effect is near zero across all post-treatment horizons. This is
-            consistent with political ideology shaping how residents interpret flood risk
-            information. Communities more skeptical of government risk assessments
-            may discount FEMA reclassifications.
+            counties, the effect is near zero across all post-treatment horizons.
+            However, <strong style={{ color: "var(--color-text)" }}>the pre-treatment
+            interaction test rejects parallel trends (F(3, 331) = 12.05, p &lt; 0.001)</strong>,
+            so this comparison is descriptive evidence of differential responsiveness
+            to official risk information, not a causal claim.
           </p>
           <EquationBlock
             compact
@@ -306,7 +310,7 @@ function TabContent({ tabKey }: { tabKey: TabKey }) {
       return (
         <div>
           <p className="text-sm mb-8 max-w-3xl" style={{ color: "var(--color-text-secondary)" }}>
-            The main specification includes all effective LOMRs — both those
+            The main specification includes all effective LOMRs, both those
             that cross the SFHA boundary and &ldquo;stable&rdquo; LOMRs that
             update base flood elevations without changing insurance mandates.
             Here we restrict to SFHA-crossing LOMRs only, dropping the ~34% of

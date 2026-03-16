@@ -104,10 +104,10 @@ export default function ResearchQuestion() {
             information reaches or influences market participants.
           </p>
           <p>
-            Using a staggered difference-in-differences design, this paper exploits
-            the quasi-random timing of LOMR effective dates across U.S. coastal zip
-            codes from 2009 to 2022 to estimate the causal effect of flood zone
-            reclassification on home values.
+            Using a staggered difference-in-differences design, this paper
+            exploits variation in the timing of LOMR effective dates across
+            U.S. coastal zip codes from 2009 to 2022 to estimate the effect
+            of flood zone reclassification on home values.
           </p>
         </div>
 

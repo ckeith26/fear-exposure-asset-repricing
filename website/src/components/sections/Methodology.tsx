@@ -86,7 +86,7 @@ export default function Methodology() {
 
         {/* Main equation */}
         <EquationBlock
-          latex={String.raw`\ln(\text{ZHVI}_{z,t}) = \alpha_z + \delta_{c(z),\,y(t)} + \sum_{\tau \neq -1} \beta_\tau \cdot \mathbf{1}[t - E_z = \tau] + \gamma \mathbf{X}_{z,t} + \varepsilon_{z,t}`}
+          latex={String.raw`\ln(\text{Real ZHVI}_{z,t}) = \alpha_z + \delta_{c(z),\,y(t)} + \sum_{\tau \neq -1} \beta_\tau \cdot \mathbf{1}[t - E_z = \tau] + \gamma \mathbf{X}_{z,t} + \varepsilon_{z,t}`}
         />
 
         <div className="space-y-5 text-[15px] leading-relaxed mb-10" style={{ color: "var(--color-text-secondary)" }}>
@@ -157,7 +157,7 @@ export default function Methodology() {
               designation for a specific area. When FEMA issues a LOMR, it
               officially updates the flood risk information for affected
               properties. Our main specification includes all effective LOMRs as
-              informational shocks to flood risk designation — not just those
+              informational shocks to flood risk designation, not just those
               that cross the SFHA boundary.
             </p>
             <p className="mb-3">

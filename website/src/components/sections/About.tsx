@@ -28,7 +28,7 @@ export default function About() {
             </div>
             <div className="mt-4 flex gap-3">
               <a
-                href="https://github.com/ckeith26/fear-exposure-asset-repricing"
+                href="https://github.com/ckeith26/flood-exposure-asset-repricing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-md transition-colors"

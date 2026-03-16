@@ -1,6 +1,6 @@
 import Section, { SectionTitle } from "@/components/Section";
 
-const REPO_BASE = "https://github.com/ckeith26/fear-exposure-asset-repricing/blob/main";
+const REPO_BASE = "https://github.com/ckeith26/flood-exposure-asset-repricing/blob/main";
 
 interface DataSource {
   name: string;
@@ -9,7 +9,7 @@ interface DataSource {
   size: string;
   acquisition: "Scripted" | "Manual";
   role: string;
-  /** Path relative to repo root — links "Scripted" badge to the download script on GitHub */
+  /** Path relative to repo root; links "Scripted" badge to the download script on GitHub */
   scriptPath?: string;
 }
 
@@ -57,7 +57,7 @@ const TREATMENT_SOURCES: DataSource[] = [
     url: "https://www.fema.gov/openfema-data-page/fima-nfip-redacted-claims-v2",
     size: "~2.3 GB",
     acquisition: "Manual",
-    role: "Mechanism outcome (moral hazard), falsification for physical risk channel",
+    role: "Placebo-like falsification check: a LOMR does not generate flooding, so claims should be unaffected",
   },
 ];
 
@@ -86,7 +86,7 @@ const HETEROGENEITY_SOURCES: DataSource[] = [
   {
     name: "State Disclosure Laws",
     source: "Verified against state statutes",
-    url: "https://github.com/ckeith26/fear-exposure-asset-repricing/blob/main/data/raw/state-disclosure-laws/disclosure_laws_sources.md",
+    url: "https://github.com/ckeith26/flood-exposure-asset-repricing/blob/main/data/raw/state-disclosure-laws/disclosure_laws_sources.md",
     size: "<1 KB",
     acquisition: "Manual",
     role: "Asymmetric information mechanism: 9-state disclosure indicator",
@@ -243,7 +243,7 @@ export default function DataSources() {
         via dedicated pipeline scripts; &ldquo;Manual&rdquo; datasets require one-time
         download from their provider. Full pipeline code is on{" "}
         <a
-          href="https://github.com/ckeith26/fear-exposure-asset-repricing"
+          href="https://github.com/ckeith26/flood-exposure-asset-repricing"
           target="_blank"
           rel="noopener noreferrer"
           className="underline"
@@ -253,6 +253,23 @@ export default function DataSources() {
         </a>
         .
       </p>
+
+      <div className="mb-10">
+        <a
+          href="#data-download"
+          className="replication-btn inline-flex items-center gap-2 rounded-lg border px-5 py-3 text-sm font-semibold transition-colors duration-150"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download Replication Package
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </a>
+      </div>
 
       <SourceTable sources={OUTCOME_SOURCES} caption="Outcome" />
       <SourceTable sources={TREATMENT_SOURCES} caption="Treatment" />

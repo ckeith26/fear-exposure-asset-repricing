@@ -499,7 +499,7 @@ function SummaryTable({ title, data }: { title: string; data: SummaryStatsData }
         )}
       </table>
 
-      {/* Hover tooltip — portaled to body */}
+      {/* Hover tooltip, portaled to body */}
       {(() => {
         const allVars = data.panels && data.panels.length > 0
           ? data.panels.flatMap(p => p.variables)
@@ -520,7 +520,7 @@ function SummaryTable({ title, data }: { title: string; data: SummaryStatsData }
                 />
               )}
 
-            {/* Click modal — portaled to body */}
+            {/* Click modal, portaled to body */}
             {mounted &&
               modalIdx !== null &&
               allVars[modalIdx]?.histogram?.length && (
